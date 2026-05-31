@@ -550,7 +550,7 @@
   }
 
 
-  .work, .education__item, .aside-container, .contacts-container { 
+  .work, section, .education__item, .aside-container, .contacts-container { 
     break-inside: avoid; 
   }
 
