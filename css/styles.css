@@ -175,6 +175,17 @@ body {
   letter-spacing: -0.01em;
 }
 
+address .section__title {
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
 .work__company {
   font-weight: 700;
   color: #0f172a;
@@ -222,6 +233,15 @@ body {
   margin-bottom: 6px;
 }
 
+.achievement {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.achievement strong {
+  color: #475569;
+}
+
 .work,
 .education__item {
   list-style: none;
@@ -243,8 +263,8 @@ section > ul {
   height: 12px;
   background-color: #ea580c;
   border-radius: 50%;
-  left: -27px;
-  top: 6px;
+  left: -29px;
+  top: 5px;
   border: 2px solid #fff;
 }
 
@@ -359,56 +379,74 @@ section > ul {
     margin: 0;
   }
 
+  /* РОЗЧИНЯЄМО КОНТЕЙНЕРИ, щоб їхні діти стали прямими нащадками .wrapper */
   .sidebar, 
-  .sidebar-content { 
+  .sidebar-content,
+  .main__container { 
     display: contents !important; 
   }
 
+  /* --- ТЕПЕР ORDER ПРАЦЮЄ ДЛЯ ВСІХ ЕЛЕМЕНТІВ --- */
+  
   .header {
-    order: 1 !important;
-    margin-bottom: 10px !important;
+    order: 1 !important; /* 1. Хедер (Ім'я та посада) на самому верху */
+    margin-bottom: 5px !important;
     padding-bottom: 0 !important;
     border: none !important;
   }
 
-  .name { 
-    margin-bottom: 5px !important;
-  }
-
   .contacts-container {
-    order: 2 !important;
+    order: 2 !important; /* 2. Контакти йдуть одразу під хедером */
     display: block !important;
     width: 100% !important;
     margin: 0 0 15px 0 !important;
-    padding-bottom: 10px !important;
-    border-bottom: 2px solid #e2e8f0 !important;
+    padding: 0 !important;
+    border: none !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
   }
 
-  .contacts-container .contact {
-    display: inline-block !important;
-    margin: 0 15px 5px 0 !important;
+  .section { 
+    order: 3 !important; /* 3. Всі секції (Summary, Skills, Досвід) йдуть нижче */
+    margin-bottom: 12px !important;
+  }
+
+  /* --- СТИЛІ КОНТАКТІВ ДЛЯ ДРУКУ --- */
+  
+  .sidebar .section__title {
+    display: none !important; 
   }
 
   .contacts-link-type {
-    display: inline !important;
-    margin-right: 4px !important;
-    color: #64748b !important;
+    display: none !important; 
   }
 
-  .contacts-link-type::after { 
-    content: ":"; 
+  .contacts-container .contact {
+    display: inline !important; 
+    margin: 0 !important;
+  }
+
+  .contacts-container .contact::after {
+    content: " | ";
+    color: #94a3b8 !important;
+    margin: 0 6px !important;
+  }
+
+  .contacts-container .contact:last-child::after {
+    content: "" !important;
+    margin: 0 !important;
   }
 
   .contacts-link {
     display: inline !important;
     color: #0f172a !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
   }
 
-  .main__container { 
-    order: 3 !important; 
-    padding: 0 !important; 
-    flex: none;
+  /* --- ІНШІ СТИЛІ --- */
+  
+  .name { 
+    margin-bottom: 5px !important;
   }
 
   section > ul {
@@ -438,10 +476,6 @@ section > ul {
     display: none !important; 
   }
 
-  .section { 
-    margin-bottom: 12px !important;
-   }
-
   .description, 
   .skills-text { 
     margin-top: 4px !important; 
@@ -459,7 +493,15 @@ section > ul {
 
   .work__position-task { 
     font-size: 13px !important; 
-    margin-bottom: 4px !important; 
+    margin-bottom: 2px !important; 
+  }
+
+  .achievement {
+    font-size: 13px !important;
+    margin-top: 2px !important;
+  }
+  .achievement strong {
+    color: #0f172a !important;
   }
 
   .education__item { 
