@@ -17,19 +17,6 @@ The resume is built using pure web technologies to ensure lightweight performanc
 *   **ATS-Friendly:** Structured with clear headings and keywords (Python, Pandas, ML, SQL) to pass Applicant Tracking Systems.
 *   **PDF-Ready:** The layout automatically adjusts margins, hides UI buttons, and reformats columns when printing to PDF.
 
-## 📄 How to View and Export
-1.  **Clone the repository:**
-```bash
-    git clone [https://github.com/StanislavYurchenko/](https://github.com/StanislavYurchenko/)[назва-твого-репозиторію].git
-```
-2.  **Open the file:**
-    Simply open the `index.html` file in any modern web browser.
-3.  **Generate PDF:**
-    *   Press `Ctrl + P` (or `Cmd + P` on Mac) to open the print dialog.
-    *   Set the destination to **"Save as PDF"**.
-    *   Ensure that "Background graphics" is enabled in the print settings to preserve the styling.
-    *   Click "Save".
-
 ## 📫 Contact Me
 *   **LinkedIn:** [Stanislav Yurchenko](https://www.linkedin.com/in/stanislav-yurchenko/)
 *   **Telegram:** [@Stanislav_Yurchenko](https://t.me/Stanislav_Yurchenko)
